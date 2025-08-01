@@ -1,32 +1,30 @@
 import java.util.Scanner;
+
 public class sumOfEven {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("\nEnter Odd numbers: ");
+        System.out.print("\nEnter the number of values to check: ");
         int num = input.nextInt();
         input.close();
+
         int i = 1;
         int n = 1;
-        int sum = 0;
-        while(i<=num){
-            n+=1;
-            if(n%2==0){
-                System.out.println("Num is Even "+n);
-                sum+= n;
-                i++;
+        int evenSum = 0;
+        int oddSum = 0;
+
+        while (i <= num) {
+            n += 1;
+            if (n % 2 == 0) {
+                System.out.println("Num is Even: " + n);
+                evenSum += n;
+            } else {
+                System.out.println("Num is Odd: " + n);
+                oddSum += n;
             }
-               
-            else{
-                System.out.println("Num is odd " +n);
-                i++;
-                sum+= n;
-            }
+            i++;
         }
-            
-            System.out.println("Sum is even "+sum);
-            System.out.println("Sum is of odd"+sum);
-        }
-        
+
+        System.out.println("\nSum of Even numbers: " + evenSum);
+        System.out.println("Sum of Odd numbers: " + oddSum);
     }
-        
-              
+}
